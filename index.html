@@ -1,1 +1,695 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="A product of emergent.sh"/><title>Arigami Digital - Професійна реклама та маркетинг</title><meta name="description" content="Arigami Digital - експерти з таргетованої реклами, SMM та брендингу. Ми створюємо ефективні рекламні кампанії з повним контролем результату."/><script defer="defer" src="/static/js/main.7ab678ea.js"></script><link href="/static/css/main.11a41523.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><a id="emergent-badge" target="_blank" href="https://app.emergent.sh/?utm_source=emergent-badge" style="display:flex!important;align-items:center!important;position:fixed!important;bottom:20px;right:20px;text-decoration:none;padding:6px 10px;font-family:-apple-system,BlinkMacSystemFont,&quot;z-index:9999!important;box-shadow:0 2px 8px rgba(0,0,0,.15)!important;border-radius:8px!important;background-color:#fff!important;border:1px solid rgba(255,255,255,.25)!important"><div style="display:flex;flex-direction:row;align-items:center"><img style="width:20px;height:20px;margin-right:8px" src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4"/><p style="color:#000;font-family:-apple-system,BlinkMacSystemFont,&quot;align-items:center;margin-bottom:0">Made with Emergent</p></div></a><script>!function(e,t){var r,s,o,i;t.__SV||(window.posthog=t,t._i=[],t.init=function(n,a,p){function c(e,t){var r=t.split(".");2==r.length&&(e=e[r[0]],t=r[1]),e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}}(o=e.createElement("script")).type="text/javascript",o.crossOrigin="anonymous",o.async=!0,o.src=a.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(i=e.getElementsByTagName("script")[0]).parentNode.insertBefore(o,i);var g=t;for(void 0!==p?g=t[p]=[]:p="posthog",g.people=g.people||[],g.toString=function(e){var t="posthog";return"posthog"!==p&&(t+="."+p),e||(t+=" (stub)"),t},g.people.toString=function(){return g.toString(1)+".people (stub)"},r="init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(" "),s=0;s<r.length;s++)c(g,r[s]);t._i.push([n,a,p])},t.__SV=1)}(document,window.posthog||[]),posthog.init("phc_yJW1VjHGGwmCbbrtczfqqNxgBDbhlhOWcdzcIJEOTFE",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only"})</script></body></html>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arigami Digital - Професійна реклама та маркетинг</title>
+    <meta name="description" content="Arigami Digital - експерти з таргетованої реклами, SMM та брендингу. Ми створюємо ефективні рекламні кампанії з повним контролем результату.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2563eb;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="%233b82f6" fill-opacity="0.05" cx="30" cy="30" r="2"/></g></svg>');
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 1rem;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .service-card p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .about-item {
+            text-align: center;
+        }
+        
+        .about-item h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        .about-item p {
+            color: #64748b;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item-icon {
+            width: 24px;
+            height: 24px;
+            background: #3b82f6;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #2563eb;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .shape-1 {
+            top: 20%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            bottom: 20%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            background: #8b5cf6;
+            transform: rotate(45deg);
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                Arigami <span style="font-weight: 900;">Digital</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>Arigami Digital</h1>
+                <p class="subtitle">
+                    Експерти з таргетованої реклами, SMM та брендингу. 
+                    Ми створюємо ефективні рекламні кампанії з повним контролем результату.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-button">Розпочати проєкт</a>
+                    <a href="#services" class="btn-secondary">Наші послуги</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Наші послуги</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">📱</div>
+                    <h3>SMM</h3>
+                    <p>Професійне ведення соціальних мереж, створення контенту та взаємодія з аудиторією</p>
+                    <a href="#contact" class="cta-button">Детальніше</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🎯</div>
+                    <h3>Brand Marketing</h3>
+                    <p>Розробка брендингу, позиціонування та стратегії просування вашого бренду</p>
+                    <a href="#contact" class="cta-button">Детальніше</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">👨\u200d💼</div>
+                    <h3>Індивідуальні консультації</h3>
+                    <p>Персональні консультації з таргетованої реклами та digital-маркетингу</p>
+                    <a href="#contact" class="cta-button">Детальніше</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">📊</div>
+                    <h3>Таргетована реклама</h3>
+                    <p>Meta Ads, TikTok Ads, Google Ads - повний цикл настройки та оптимізації</p>
+                    <a href="#contact" class="cta-button">Детальніше</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🎨</div>
+                    <h3>Креативи для реклами</h3>
+                    <p>Створення ефективних креативів, відео та графічних матеріалів для реклами</p>
+                    <a href="#contact" class="cta-button">Детальніше</a>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🌐</div>
+                    <h3>Лендінги та сайти</h3>
+                    <p>Розробка конверсійних лендінгів та корпоративних сайтів</p>
+                    <a href="#contact" class="cta-button">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Чому обирають нас</h2>
+            <div class="about-content">
+                <div class="about-item fade-in-up">
+                    <h3>🎯 Контроль</h3>
+                    <p>Повний контроль над рекламними кампаніями та прозорість усіх процесів</p>
+                </div>
+                
+                <div class="about-item fade-in-up">
+                    <h3>📈 Стратегія</h3>
+                    <p>Розробка індивідуальної стратегії для кожного клієнта на основі аналізу</p>
+                </div>
+                
+                <div class="about-item fade-in-up">
+                    <h3>📊 Аналітика</h3>
+                    <p>Глибока аналітика результатів та постійна оптимізація кампаній</p>
+                </div>
+                
+                <div class="about-item fade-in-up">
+                    <h3>🎨 Креативність</h3>
+                    <p>∞ Креативних ідей для вашого бізнесу</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="services" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+        <div class="container">
+            <h2 class="section-title">Наша місія</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.25rem; color: #64748b; line-height: 1.8;">
+                    Маркетинг - це не просто реклама, це мистецтво зв'язку між брендом та людьми. 
+                    Ми створюємо емоційні зв'язки, які перетворюють потенційних клієнтів на лояльних прихильників вашого бренду. 
+                    Кожна кампанія - це унікальна історія, яку ми розповідаємо з душею та професіоналізмом.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Зв'яжіться з нами</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Ім'я *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Послуга</label>
+                            <select id="service" name="service">
+                                <option value="">Оберіть послугу</option>
+                                <option value="smm">SMM</option>
+                                <option value="brand-marketing">Brand Marketing</option>
+                                <option value="consultation">Індивідуальні консультації</option>
+                                <option value="ads">Таргетована реклама</option>
+                                <option value="creative">Креативи для реклами</option>
+                                <option value="website">Лендінги та сайти</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Повідомлення</label>
+                            <textarea id="message" name="message" placeholder="Розкажіть про ваш проєкт"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">Відправити заявку</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Контактна інформація</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon"></div>
+                        <div>
+                            <strong>Телефон:</strong><br>
+                            <a href="tel:+380637123814" style="color: #3b82f6;">+38 (063) 712-38-14</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon"></div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:arigamidigital@gmail.com" style="color: #3b82f6;">arigamidigital@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon"></div>
+                        <div>
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/380637123814" style="color: #3b82f6;">Написати в WhatsApp</a>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4>Соціальні мережі:</h4>
+                        <div class="social-links">
+                            <a href="#" title="Facebook">f</a>
+                            <a href="#" title="Instagram">i</a>
+                            <a href="https://wa.me/380637123814" title="WhatsApp">w</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Arigami Digital</h3>
+                    <p>Професійна реклама та маркетинг</p>
+                </div>
+                
+                <div>
+                    <h3>Контакти</h3>
+                    <p>📞 +38 (063) 712-38-14</p>
+                    <p>✉️ arigamidigital@gmail.com</p>
+                </div>
+                
+                <div>
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">i</a>
+                        <a href="https://wa.me/380637123814" title="WhatsApp">w</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #374151;">
+                <p>&copy; 2024 Arigami Digital. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Дякуємо за заявку! Ми зв\'яжемось з вами найближчим часом.');
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
