@@ -41,6 +41,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
+            position: relative;
         }
         
         .logo {
@@ -66,6 +67,97 @@
             color: #2563eb;
         }
         
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #2563eb;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-nav.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 20px;
+        }
+        
+        .mobile-nav li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            transition: color 0.3s;
+        }
+        
+        .mobile-nav a:hover {
+            color: #2563eb;
+        }
+        
+        .mobile-cta {
+            margin-top: 15px;
+        }
+        
         .cta-button {
             background: linear-gradient(135deg, #2563eb, #3b82f6);
             color: white;
@@ -76,6 +168,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border: none;
             cursor: pointer;
+            display: inline-block;
         }
         
         .cta-button:hover {
@@ -342,40 +435,118 @@
             background: #2563eb;
         }
         
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-links,
+            .nav .cta-button {
                 display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
             }
             
             .hero h1 {
                 font-size: 2.5rem;
+                line-height: 1.1;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
             }
             
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 0.75rem;
+            }
+            
+            .hero-buttons .cta-button,
+            .hero-buttons .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+            
+            .services {
+                padding: 60px 0;
             }
             
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .about {
+                padding: 60px 0;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact {
+                padding: 60px 0;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .footer {
+                padding: 2rem 0 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: left;
             }
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .section-title {
+                font-size: 1.75rem;
             }
-        }
-        
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
+            
+            .service-card,
+            .contact-form {
+                padding: 1rem;
+            }
         }
         
         .floating-shape {
@@ -408,30 +579,53 @@
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
+        
+        @media (max-width: 768px) {
+            .floating-shape {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">
                 Arigami <span style="font-weight: 900;">Digital</span>
             </div>
+            
             <ul class="nav-links">
                 <li><a href="#services">Послуги</a></li>
                 <li><a href="#about">Про нас</a></li>
                 <li><a href="#contact">Контакти</a></li>
             </ul>
+            
             <a href="#contact" class="cta-button">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="#services" onclick="closeMobileMenu()">Послуги</a></li>
+                    <li><a href="#about" onclick="closeMobileMenu()">Про нас</a></li>
+                    <li><a href="#contact" onclick="closeMobileMenu()">Контакти</a></li>
+                    <li class="mobile-cta">
+                        <a href="#contact" class="cta-button" onclick="closeMobileMenu()">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
         <div class="container">
-            <div class="hero-content fade-in-up">
+            <div class="hero-content">
                 <h1>Arigami Digital</h1>
                 <p class="subtitle">
                     Експерти з таргетованої реклами, SMM та брендингу. 
@@ -445,47 +639,46 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Наші послуги</h2>
             <div class="services-grid">
-                <div class="service-card fade-in-up">
+                <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>SMM</h3>
                     <p>Професійне ведення соціальних мереж, створення контенту та взаємодія з аудиторією</p>
                     <a href="#contact" class="cta-button">Детальніше</a>
                 </div>
                 
-                <div class="service-card fade-in-up">
+                <div class="service-card">
                     <div class="service-icon">🎯</div>
                     <h3>Brand Marketing</h3>
                     <p>Розробка брендингу, позиціонування та стратегії просування вашого бренду</p>
                     <a href="#contact" class="cta-button">Детальніше</a>
                 </div>
                 
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">👨\u200d💼</div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍💼</div>
                     <h3>Індивідуальні консультації</h3>
                     <p>Персональні консультації з таргетованої реклами та digital-маркетингу</p>
                     <a href="#contact" class="cta-button">Детальніше</a>
                 </div>
                 
-                <div class="service-card fade-in-up">
+                <div class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>Таргетована реклама</h3>
                     <p>Meta Ads, TikTok Ads, Google Ads - повний цикл настройки та оптимізації</p>
                     <a href="#contact" class="cta-button">Детальніше</a>
                 </div>
                 
-                <div class="service-card fade-in-up">
+                <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>Креативи для реклами</h3>
                     <p>Створення ефективних креативів, відео та графічних матеріалів для реклами</p>
                     <a href="#contact" class="cta-button">Детальніше</a>
                 </div>
                 
-                <div class="service-card fade-in-up">
+                <div class="service-card">
                     <div class="service-icon">🌐</div>
                     <h3>Лендінги та сайти</h3>
                     <p>Розробка конверсійних лендінгів та корпоративних сайтів</p>
@@ -495,27 +688,26 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">Чому обирають нас</h2>
             <div class="about-content">
-                <div class="about-item fade-in-up">
+                <div class="about-item">
                     <h3>🎯 Контроль</h3>
                     <p>Повний контроль над рекламними кампаніями та прозорість усіх процесів</p>
                 </div>
                 
-                <div class="about-item fade-in-up">
+                <div class="about-item">
                     <h3>📈 Стратегія</h3>
                     <p>Розробка індивідуальної стратегії для кожного клієнта на основі аналізу</p>
                 </div>
                 
-                <div class="about-item fade-in-up">
+                <div class="about-item">
                     <h3>📊 Аналітика</h3>
                     <p>Глибока аналітика результатів та постійна оптимізація кампаній</p>
                 </div>
                 
-                <div class="about-item fade-in-up">
+                <div class="about-item">
                     <h3>🎨 Креативність</h3>
                     <p>∞ Креативних ідей для вашого бізнесу</p>
                 </div>
@@ -523,7 +715,6 @@
         </div>
     </section>
 
-    <!-- Mission Section -->
     <section class="services" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
         <div class="container">
             <h2 class="section-title">Наша місія</h2>
@@ -537,7 +728,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Зв'яжіться з нами</h2>
@@ -621,7 +811,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -653,7 +842,28 @@
     </footer>
 
     <script>
-        // Smooth scrolling
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        function toggleMobileMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            mobileMenuBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+        }
+        
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.nav');
+            if (!nav.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -667,28 +877,9 @@
             });
         });
 
-        // Form handling
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Дякуємо за заявку! Ми зв\'яжемось з вами найближчим часом.');
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
